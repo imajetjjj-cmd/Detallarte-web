@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detallarte | Tazas y detalles personalizados</title>
+    <meta
+      name="description"
+      content="Tazas y detalles personalizados hechos con amor en Colombia. Pide tu detalle por WhatsApp."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Iconos reutilizables -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.19-1.36A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.14 15.06l-.3-.18-3 .78.8-2.92-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm-3.2 3.7c-.16 0-.42.06-.64.3-.22.25-.84.82-.84 2s.86 2.3.98 2.47c.12.16 1.68 2.7 4.15 3.67 2.05.8 2.47.65 2.91.6.45-.04 1.43-.58 1.63-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28-.25-.12-1.43-.7-1.65-.78-.22-.08-.39-.12-.55.12-.16.25-.63.78-.77.94-.14.16-.28.18-.52.06-.25-.12-1.03-.38-1.96-1.2a7.3 7.3 0 0 1-1.35-1.68c-.14-.24 0-.37.1-.5.11-.11.25-.28.37-.42.12-.14.16-.24.25-.4.08-.17.04-.3-.02-.42-.06-.12-.55-1.34-.76-1.83-.2-.47-.4-.4-.55-.41h-.47Z"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"
+        />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+        </g>
+        <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" />
+      </symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M16.6 2h-3.2v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.2a6.1 6.1 0 1 0 5.3 6.1V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.8Z"
+        />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 12h16m-6-6 6 6-6 6"
+        />
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4.2 0-8 2-8 5v2h16v-2c0-3-3.8-5-8-5Z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a href="#inicio" class="navbar__logo" aria-label="Detallarte - inicio">
+          <img src="https://i.postimg.cc/1RLcBcHt/image-removebg-preview-(8).png" alt="Logo de Detallarte" />
+        </a>
+
+        <nav class="navbar__links" aria-label="Principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="navbar__cta">
+          <a href="tel:+573123931800" class="navbar__phone">+57 312 393 1800</a>
+          <a
+            href="https://wa.me/573123931800?text=%C2%A1Hola!%20Me%20interesa%20un%20detalle%20personalizado%20de%20Detallarte."
+            class="btn btn--whatsapp"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-whatsapp" />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="inicio">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="badge">✨ Detalles únicos, hechos con amor</span>
+
+            <h1 class="hero__title">
+              Regala algo que <span class="hero__accent">nunca</span> olvidarán
+            </h1>
+
+            <p class="hero__tagline">
+              Detalles con amor – para quien más quieres
+            </p>
+
+            <p class="hero__text">
+              En <strong>Detallarte</strong> creamos tazas y detalles
+              personalizados que llevan un significado especial y único para
+              cada persona. Porque los mejores regalos son los que cuentan una
+              historia.
+            </p>
+
+            <div class="hero__actions">
+              <a
+                href="https://wa.me/573123931800?text=%C2%A1Hola!%20Quiero%20pedir%20mi%20detalle."
+                class="btn btn--primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Pedir mi detalle
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg>
+              </a>
+              <a href="#productos" class="btn btn--outline">Ver productos</a>
+            </div>
+          </div>
+
+          <div class="hero__media">
+            <img
+              src="https://i.postimg.cc/dttSM9CC/taza-juliana.jpg"
+              alt="Taza personalizada sobre papel kraft"
+              class="hero__img"
+            />
+            <div class="hero__price">
+              <small>Desde</small>
+              <strong>$15.000</strong>
+            </div>
+            <!-- Tarjeta flotante inferior: ajusta el texto a tu diseño original -->
+            <div class="hero__float">
+              <span aria-hidden="true">💝</span> 100% personalizado
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OCASIONES ============ -->
+      <section class="occasions" aria-label="Ocasiones">
+        <ul class="container occasions__list">
+          <li class="chip"><span aria-hidden="true">🎂</span> Cumpleaños</li>
+          <li class="chip"><span aria-hidden="true">💍</span> Aniversarios</li>
+          <li class="chip"><span aria-hidden="true">💒</span> Bodas</li>
+          <li class="chip"><span aria-hidden="true">🎓</span> Graduaciones</li>
+          <li class="chip"><span aria-hidden="true">🎉</span> Celebraciones</li>
+          <li class="chip"><span aria-hidden="true">👥</span> Reuniones</li>
+          <li class="chip"><span aria-hidden="true">❤️</span> San Valentín</li>
+          <li class="chip">
+            <span aria-hidden="true">🌸</span> Día de la Madre
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ PRODUCTOS ============ -->
+      <section class="section section--yellow" id="productos">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Nuestros productos</p>
+            <h2 class="section__title">Detalles que enamoran</h2>
+            <p class="section__sub">
+              Cada pieza es diseñada exclusivamente para ti, adaptada a tus
+              ideas y a la personalidad de quien lo recibirá.
+            </p>
+          </header>
+
+          <div class="products">
+            <article class="card product">
+              <div class="product__media">
+                <img src="https://i.postimg.cc/Bn3zYGgT/taza-sencilla.png" alt="Taza personalizada blanca" />
+                <span class="tag">Más Economica</span>
+              </div>
+              <div class="product__body">
+                <h3 class="product__name">Taza Personalizada Unicolor </h3>
+                <p class="product__desc">
+                  Diseño exclusivo con fotos, nombres o frases que solo tú
+                  conoces. Perfecta para cualquier momento especial.
+                </p>
+                <div class="product__foot">
+                  <span class="product__price">Desde $13.000</span>
+                  <a
+                    href="https://wa.me/573123931800?text=%C2%A1Hola!%20Quiero%20pedir%20una%20Taza%20Personalizada."
+                    class="btn btn--dark btn--sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Pedir</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="card product">
+              <div class="product__media">
+                <img
+                  src="https://i.postimg.cc/rwzVpWBt/taza-magica.jpg"
+                  alt="Taza premium con diseño colorido"
+                />
+              </div>
+              <div class="product__body">
+                <h3 class="product__name">Taza Magica</h3>
+                <p class="product__desc">
+                  Taza que revela diseño al calor y diseño elaborado. Para
+                  regalar algo que realmente sorprenda.
+                </p>
+                <div class="product__foot">
+                  <span class="product__price">Desde $20.000</span>
+                  <a
+                    href="https://wa.me/573123931800?text=%C2%A1Hola!%20Quiero%20pedir%20una%20Taza%20Premium."
+                    class="btn btn--dark btn--sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Pedir</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="card product">
+              <div class="product__media">
+                <img
+                  src="https://i.postimg.cc/SxmZLfSY/tazas-de-color.webp"
+                  alt="Set de dos tazas sobre una caja de madera"
+                />
+                <span class="tag">Más Popular</span>
+              </div>
+              <div class="product__body">
+                <h3 class="product__name">Taza personalizada de color</h3>
+                <p class="product__desc">
+                  Taza con Oreja y interios del color preferido.
+                  Empacadas en caja de regalo lista para entregar.
+                </p>
+                <div class="product__foot">
+                  <span class="product__price">Desde $15.000</span>
+                  <a
+                    href="https://wa.me/573123931800?text=%C2%A1Hola!%20Quiero%20pedir%20un%20Set%20de%20Tazas."
+                    class="btn btn--dark btn--sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Pedir</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="card product">
+              <div class="product__media">
+                <img
+                  src="https://i.postimg.cc/Vvc9fz54/magica-tapa.webp"
+                  alt="Regalos envueltos con moños de colores"
+                />
+              </div>
+              <div class="product__body">
+                <h3 class="product__name">Magia Especial</h3>
+                <p class="product__desc">
+                  Tazas con amor: Tazas magicas con tapa para conservar
+                  el calor de tu amor. Consulta disponibilidad.
+                </p>
+                <div class="product__foot">
+                  <span class="product__price">Desde $22.000</span>
+                  <a
+                    href="https://wa.me/573123931800?text=%C2%A1Hola!%20Quiero%20consultar%20por%20un%20Detalle%20Especial."
+                    class="btn btn--dark btn--sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Pedir</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CÓMO FUNCIONA ============ -->
+      <section class="section section--blue" id="como-funciona">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow eyebrow--dark">El proceso</p>
+            <h2 class="section__title">Crear tu detalle es fácil</h2>
+            <p class="section__sub">
+              En tres pasos sencillos tu regalo estará listo para sorprender.
+            </p>
+          </header>
+
+          <ol class="steps">
+            <li class="card step">
+              <span class="step__num">01</span>
+              <h3 class="step__title">Cuéntanos tu idea</h3>
+              <p class="step__text">
+                Escríbenos por WhatsApp con la ocasión, la persona y tu idea.
+                Cuanto más detallada sea tu visión, más especial quedará el
+                resultado.
+              </p>
+            </li>
+            <li class="card step">
+              <span class="step__num">02</span>
+              <h3 class="step__title">Diseñamos juntos</h3>
+              <p class="step__text">
+                Nuestro equipo crea un diseño personalizado según tus gustos. Te
+                enviamos una vista previa para que apruebes o ajustes lo que
+                necesites.
+              </p>
+            </li>
+            <li class="card step">
+              <span class="step__num">03</span>
+              <h3 class="step__title">Recibe tu detalle único</h3>
+              <p class="step__text">
+                Producimos tu pedido con la mayor calidad y te lo entregamos
+                listo para sorprender. Cada detalle tiene un significado
+                especial.
+              </p>
+            </li>
+          </ol>
+
+          <div class="section__cta">
+            <a
+              href="https://wa.me/573123931800?text=%C2%A1Hola!%20Quiero%20empezar%20mi%20pedido."
+              class="btn btn--primary btn--glow"
+              target="_blank"
+              rel="noopener"
+            >
+              Empezar por WhatsApp
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-whatsapp" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIOS ============ -->
+      <section class="section section--yellow" id="testimonios">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Testimonios</p>
+            <h2 class="section__title">Lo que dicen nuestros clientes</h2>
+            <p class="section__sub">
+              Cada reseña es una historia de amor, alegría y momentos únicos.
+            </p>
+          </header>
+
+          <div class="reviews">
+            <figure class="card review">
+              <div class="review__photo">
+                <img
+                  src="https://i.postimg.cc/zXzW0thm/valentina.jpg"
+                  alt="Taza personalizada de Valentina"
+                />
+              </div>
+              <div class="review__body">
+                <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                  ★★★★★
+                </div>
+                <blockquote class="review__quote">
+                  "Le regalé una taza con una foto de nosotras dos y lloró de
+                  emoción. Detallarte sabe exactamente cómo hacer que un regalo
+                  se sienta único e irrepetible."
+                </blockquote>
+                <figcaption class="review__author">
+                  <span class="avatar"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-user" /></svg
+                  ></span>
+                  <span>
+                    <strong>Valentina Ríos</strong>
+                    <small>Bogotá, Colombia</small>
+                  </span>
+                </figcaption>
+              </div>
+            </figure>
+
+            <figure class="card review">
+              <div class="review__photo">
+                <img src="https://i.postimg.cc/8ct72GvF/pareja.webp" alt="Set de tazas de Carlos" />
+              </div>
+              <div class="review__body">
+                <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                  ★★★★★
+                </div>
+                <blockquote class="review__quote">
+                  "Para el aniversario de mis padres pedí un set con sus nombres
+                  y la fecha de bodas. La calidad es increíble y la atención fue
+                  rapidísima. Volveré a pedir seguro."
+                </blockquote>
+                <figcaption class="review__author">
+                  <span class="avatar"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-user" /></svg
+                  ></span>
+                  <span>
+                    <strong>Carlos Mendoza</strong>
+                    <small>Bogotá, Colombia</small>
+                  </span>
+                </figcaption>
+              </div>
+            </figure>
+
+            <figure class="card review">
+              <div class="review__photo">
+                <img
+                  src="https://i.postimg.cc/j5h2fTZW/graduacion.avif"
+                  alt="Taza de graduación de Daniela"
+                />
+              </div>
+              <div class="review__body">
+                <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                  ★★★★★
+                </div>
+                <blockquote class="review__quote">
+                  "Pedí una taza para la graduación de mi amiga con una frase
+                  que solo nosotras entendemos. Quedó perfecta y ella la sube a
+                  todas sus historias. ¡Todos preguntan dónde la consiguió!"
+                </blockquote>
+                <figcaption class="review__author">
+                  <span class="avatar"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-user" /></svg
+                  ></span>
+                  <span>
+                    <strong>Daniela Ospina</strong>
+                    <small>Bogotá, Colombia</small>
+                  </span>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACTO / CTA FINAL ============ -->
+      <section class="cta" id="contacto">
+        <div class="container cta__inner">
+          <span class="badge badge--glass"
+            >📲 Respuesta en menos de 24 horas</span
+          >
+          <h2 class="cta__title">¿Listo para crear tu detalle especial?</h2>
+          <p class="cta__tagline">Detalles con amor – para quien más quieres</p>
+          <p class="cta__text">
+            Escríbenos por WhatsApp, cuéntanos tu idea y en poco tiempo tendrás
+            un regalo único que emocionará a quien lo reciba.
+          </p>
+
+          <div class="cta__actions">
+            <a
+              href="https://wa.me/573123931800?text=%C2%A1Hola!%20Me%20interesa%20un%20detalle%20personalizado%20de%20Detallarte."
+              class="btn btn--yellow btn--glow"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg class="icon icon--green" aria-hidden="true">
+                <use href="#i-whatsapp" />
+              </svg>
+              Escribir por WhatsApp
+            </a>
+            <a href="tel:+573123931800" class="btn btn--outline-light">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>
+              +57 312 393 1800
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#inicio" class="footer__logo" aria-label="Detallarte - inicio">
+          <img src="https://i.postimg.cc/PqjdQcLK/image-removebg-preview-(9).png" alt="Logo de Detallarte" />
+        </a>
+
+        <nav class="footer__links" aria-label="Pie de página">
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="footer__social">
+          <a
+            href="https://wa.me/573123931800"
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noopener"
+            ><svg class="icon"><use href="#i-whatsapp" /></svg
+          ></a>
+          <a
+            href="https://www.instagram.com/detallarte622/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener"
+            ><svg class="icon"><use href="#i-instagram" /></svg
+          ></a>
+          <a
+            href="https://www.tiktok.com/"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener"
+            ><svg class="icon"><use href="#i-tiktok" /></svg
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/573123931800?text=%C2%A1Hola!%20Me%20interesa%20un%20detalle%20personalizado%20de%20Detallarte."
+      class="wa-float"
+      aria-label="Escríbenos por WhatsApp"
+      target="_blank"
+      rel="noopener"
+    >
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+    </a>
+  </body>
+</html>
