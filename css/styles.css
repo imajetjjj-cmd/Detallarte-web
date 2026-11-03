@@ -589,8 +589,9 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .wa-float { transition: none; }
+}
 
-   /* ---------- Pantalla de bienvenida ---------- */
+/* ---------- Pantalla de bienvenida ---------- */
 .no-scroll { overflow: hidden; }
 
 .splash {
@@ -624,5 +625,4 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .splash__logo { animation: none; }
-}
 }
