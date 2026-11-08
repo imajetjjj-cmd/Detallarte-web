@@ -20,11 +20,19 @@
   <body class="no-scroll">
     <!-- ============ PANTALLA DE BIENVENIDA ============ -->
     <div class="splash" id="splash">
-      <img
-        src="https://i.postimg.cc/qR6G8Zjf/image-removebg-preview-(2)-(1).png"
-        alt="Detallarte"
-        class="splash__logo"
-      />
+      <video
+        class="splash__video"
+        id="splash-video"
+        src="video/intro.mp4"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      ></video>
+      <button type="button" class="splash__skip" id="splash-skip">
+        Saltar intro
+      </button>
     </div>
 
     <!-- Iconos reutilizables -->
@@ -549,12 +557,40 @@
 
     <!-- Script de la pantalla de bienvenida -->
     <script>
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          document.getElementById("splash").classList.add("is-hidden");
+      (function () {
+        var splash = document.getElementById("splash");
+        var video = document.getElementById("splash-video");
+        var skip = document.getElementById("splash-skip");
+        var cerrado = false;
+
+        function cerrarIntro() {
+          if (cerrado) return;
+          cerrado = true;
+          splash.classList.add("is-hidden");
           document.body.classList.remove("no-scroll");
-        }, 2500);
-      });
+          setTimeout(function () {
+            video.pause();
+            splash.remove();
+          }, 800);
+        }
+
+        // Se cierra cuando termina el video
+        video.addEventListener("ended", cerrarIntro);
+        // Si el video no carga (archivo faltante, error), no bloquea la página
+        video.addEventListener("error", cerrarIntro);
+        // Botón para saltar
+        skip.addEventListener("click", cerrarIntro);
+
+        // Si el navegador bloquea el autoplay, cierra la intro
+        var intento = video.play();
+        if (intento && intento.catch) intento.catch(cerrarIntro);
+
+        // Seguro: nunca más de 10 s de intro (ajústalo a la duración de tu video)
+        setTimeout(cerrarIntro, 10000);
+      })();
+    </script>
+  </body>
+</html>
     </script>
   </body>
 </html>
