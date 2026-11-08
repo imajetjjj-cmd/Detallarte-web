@@ -608,21 +608,28 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   visibility: hidden;
 }
 
-.splash__logo {
-  width: min(70vw, 380px);
-  animation:
-    splash-in 1.2s ease-out both,
-    splash-pulse 1.6s ease-in-out 1.2s infinite;
+/* Video de la intro: llena toda la pantalla sin deformarse */
+.splash__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* usa "contain" si no quieres que se recorte nada */
 }
 
-@keyframes splash-in {
-  from { opacity: 0; transform: scale(.4) rotate(-12deg); }
-  to   { opacity: 1; transform: scale(1) rotate(0); }
+/* Botón "Saltar intro" */
+.splash__skip {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, .85);
+  background: rgba(0, 0, 0, .25);
+  color: var(--white);
+  font: 600 .9rem var(--font-body);
+  cursor: pointer;
+  transition: background-color .2s;
 }
-@keyframes splash-pulse {
-  50% { transform: scale(1.06); }
-}
-
+.splash__skip:hover { background: rgba(0, 0, 0, .45); }
 @media (prefers-reduced-motion: reduce) {
   .splash__logo { animation: none; }
 }
